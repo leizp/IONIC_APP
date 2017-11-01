@@ -29,7 +29,7 @@ export class LoginPage {
 
     this.jsonp.request(url).subscribe(
       (data) => {
-      console.log(JSON.stringify(res))
+      console.log(JSON.stringify(data))
     },
     (error) => {
       console.log(error)
