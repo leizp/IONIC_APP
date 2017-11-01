@@ -14,3 +14,95 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+// 头部显示公共样式--start----for--android
+.toolbar-background-md{
+  background: url('../assets/imgs/common/bg-top.png');
+}
+.toolbar-title-md{
+  color:#FAE39C;
+  font-size: 3rem;
+  text-align: center;
+}
+.header-md::after, 
+.tabs-md[tabsPlacement="top"] > .tabbar::after, 
+.footer-md::before, 
+.tabs-md[tabsPlacement="bottom"] > .tabbar::before{
+  display:none;
+}
+//--for--IOS
+.toolbar-background-ios{
+  background: url('../assets/imgs/common/bg-top.png');
+}
+.toolbar-title-ios{
+  color:#FAE39C;
+  font-size: 3rem;
+}
+.header-ios::after, 
+.tabs-ios[tabsPlacement="top"] > .tabbar::after, 
+.footer-ios::before, 
+.tabs-ios[tabsPlacement="bottom"] > .tabbar::before{
+  display:none;
+}
+// 头部显示公共样式--start----for--IOS
+
+// 底部导航公共样式--start-------
+.tabs-md .tabbar,
+.tabs-ios .tabbar{
+  background:url("../assets/imgs/common/bg-bottom.png");
+}
+.enable-hover a:hover{
+  opacity: 1;
+}
+$tapImageName: 'record' 'tree' 'space' 'manager';
+@for $i from 1 to 5 {
+  // for IOS
+  .ion-ios-#{nth($tapImageName, $i)}:before {
+    content:'';
+    width: 2.4rem;
+    height: 2.4rem;
+    background:url("../assets/imgs/common/ico_#{nth($tapImageName, $i)}_check.png");
+    background-size: cover;    
+  }
+  .tabs-ios .tab-button:hover:not(.disable-hover), 
+  .tabs-ios .tab-button[aria-selected=true]{
+    color:#CE4F5A;
+  }
+  .ion-ios-#{nth($tapImageName, $i)}-outline:before {    
+    content:'';
+    width: 2.4rem;
+    height: 2.4rem;
+    background:url("../assets/imgs/common/ico_#{nth($tapImageName, $i)}_normal.png");
+    background-size: cover;  
+  }
+  // for android
+  .tabs-md .tab-button[aria-selected=true] {
+    .ion-md-#{nth($tapImageName, $i)}:before {
+      content:'';
+      width: 2.4rem;
+      height: 2.4rem;
+      background:url("../assets/imgs/common/ico_#{nth($tapImageName, $i)}_check.png");
+      background-size: cover;    
+    }
+    color:#CE4F5A;
+    .tab-button-icon{
+      -webkit-transform: none;
+      transform: none;
+    }
+    .tab-button-text{
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  .tabs-md .tab-button[aria-selected=false] {
+    .ion-md-#{nth($tapImageName, $i)}:before {    
+      content:'';
+      width: 2.4rem;
+      height: 2.4rem;
+      background:url("../assets/imgs/common/ico_#{nth($tapImageName, $i)}_normal.png");
+      background-size: cover;  
+    }
+    color:#333;
+  }
+}
+// 底部导航公共样式--end-------
