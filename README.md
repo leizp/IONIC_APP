@@ -44,11 +44,6 @@ Substitute ios for android if not on a Mac.
   $ ionic cordova build android
   $ ionic cordova emulate android
 
-  作者：devilx
-  链接：http://www.jianshu.com/p/1baf40713c1c
-  來源：简书
-  著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-
 ## 学习说明
   1、首先，更改启动页图标和打包app图标，需要两张图片，放在根目录下resources目录下就可以，然后，cmd命令输入
 
